@@ -10,49 +10,18 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Screen'),
       ),
-
-      body:const SingleChildScrollView(
-           child: CustomTabController(),
-              ),
-      // body: DefaultTabController(
-      //   length: 2,
-      //   child: Column(
-      //     children: [
-      //       TabBar(
-      //         labelColor: Colors.black, // Set the label/text color to black
-      //         tabs: const [
-      //           Tab(
-      //             child: Text(
-      //               'Home',
-      //               style: TextStyle(
-      //                 color: Colors.black, // Set the text color to black
-      //               ),
-      //             ),
-      //           ),
-      //           Tab(
-      //             child: Text(
-      //               'Card',
-      //               style: TextStyle(
-      //                 color: Colors.black, // Set the text color to black
-      //               ),
-      //             ),
-      //           ),
-      //         ],
-      //       ),
-      //       Expanded(
-      //         child: TabBarView(
-      //           children: [
-      //             // Your Home content
-      //             const Text('Home Screen'),
-      //             // Your Card content
-      //             const Text('Card content'),
-      //           ],
-      //         ),
-      //       ),
-      //     ],
-      //   ),
-      // ),
-
+      body: const SingleChildScrollView(
+        child: CustomTabController(),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed logic here
+          print('Floating Action Button Pressed');
+        },
+        child: const Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
+
