@@ -15,6 +15,7 @@ class CardScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
+          // ignore: prefer_const_constructors
           child: Text('Go to Settings'),
           onPressed: () => null,
         ),
