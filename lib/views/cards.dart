@@ -26,8 +26,8 @@ class _CardsState extends State<Cards> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        SizedBox(height: 80.0),
-        Container( // Wrap ListView.builder with Container
+        const SizedBox(height: 80.0),
+        SizedBox( // Wrap ListView.builder with Container
           height: 200.0, // Set a specific height
           child: ListView.builder(
             itemCount: cards.length,
@@ -42,7 +42,7 @@ class _CardsState extends State<Cards> {
                     });
                   },
                   child: AnimatedOpacity(
-                    duration: Duration(milliseconds: 300),
+                    duration: const Duration(milliseconds: 300),
                     opacity: selectedIndex == index ? 0.0 : 1.0,
                     child: Card(
                       elevation: 4,
@@ -53,7 +53,7 @@ class _CardsState extends State<Cards> {
                         child: ListTile(
                           title: Text(
                             card.title,
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                           ),
                         ),
                       ),
@@ -71,7 +71,7 @@ class _CardsState extends State<Cards> {
 
   Widget buildSelectedCard() {
     final selectedCard = cards[selectedIndex];
-    return Container(
+    return SizedBox(
       height: 200.0,
       child: GestureDetector(
         onTap: () {
@@ -85,7 +85,7 @@ class _CardsState extends State<Cards> {
           child: ListTile(
             title: Text(
               selectedCard.title,
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
           ),
         ),
