@@ -1,6 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
+import '../widget/credit_generic_widget.dart';
+
 class Cards extends StatefulWidget {
   const Cards({Key? key}) : super(key: key);
 
@@ -79,19 +81,14 @@ class _CardsState extends State<Cards> {
             selectedIndex = -1;
           });
         },
-        child: Card(
-          elevation: 4,
-          color: selectedCard.color,
-          child: ListTile(
-            title: Text(
-              selectedCard.title,
-              style: const TextStyle(color: Colors.white),
-            ),
-          ),
+        child: GenericCreditWidget(
+          cardColor: selectedCard.color,
+          cardNumber: selectedCard.title, backCardBackgroundColor: Colors.transparent,
         ),
       ),
     );
   }
+
 
   Color getRandomColor() {
     final random = Random();
