@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../route/route.dart' show settingsPage; // Make sure to import the correct route
+// Make sure to import the correct route
 
 class CardScreen extends StatelessWidget {
   const CardScreen({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class CardScreen extends StatelessWidget {
         child: ElevatedButton(
           // ignore: prefer_const_constructors
           child: Text('Go to Settings'),
-          onPressed: () => null,
+          onPressed: () {},
         ),
       ),
     );
